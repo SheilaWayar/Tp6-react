@@ -15,11 +15,9 @@ function ContactForm() {
 
   return (
     <div id="contacto" className="card">
-      <h2 style={{ color: "#831f6a", marginBottom: "1rem", textAlign: "center" }}>
-        Contacto
-      </h2>
+      <h2>Contacto</h2>
       
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           placeholder="Nombre"
@@ -47,25 +45,11 @@ function ContactForm() {
         <button type="submit">Enviar</button>
       </form>
 
-      <div style={{ 
-        marginTop: "2rem", 
-        padding: "1.5rem", 
-        border: "2px dashed #6a1b1b", 
-        borderRadius: "8px", 
-        background: "#f9f4f4" 
-      }}>
-        <h3 style={{ margin: "0 0 1rem 0", color: "#bb1a6a", fontSize: "18px" }}>
-          Preview en vivo:
-        </h3>
-        <p style={{ color: "#555", margin: "0.5rem 0" }}>
-          <strong style={{ color: "#9b1d4d" }}>Nombre:</strong> {nombre || "-"}
-        </p>
-        <p style={{ color: "#555", margin: "0.5rem 0" }}>
-          <strong style={{ color: "#9b1d4d" }}>Email:</strong> {email || "-"}
-        </p>
-        <p style={{ color: "#555", margin: "0.5rem 0" }}>
-          <strong style={{ color: "#9b1d4d" }}>Mensaje:</strong> {mensaje || "-"}
-        </p>
+      <div className="preview">
+        <h3>Preview en vivo:</h3>
+        <p><strong>Nombre:</strong> {nombre || "-"}</p>
+        <p><strong>Email:</strong> {email || "-"}</p>
+        <p><strong>Mensaje:</strong> {mensaje || "-"}</p>
       </div>
     </div>
   );
