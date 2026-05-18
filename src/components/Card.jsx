@@ -1,4 +1,5 @@
 import React from "react";
+import "./card.css";
 
 function Card({ producto }) {
   const formatearPrecio = (precio) => {
@@ -14,60 +15,23 @@ function Card({ producto }) {
       <img 
         src={producto.imagen} 
         alt={producto.nombre}
-        style={{ 
-          width: "100%", 
-          height: "180px", 
-          objectFit: "cover", 
-          borderRadius: "6px",
-          marginBottom: "1rem"
-        }}
       />
       
-      <h3 style={{ 
-        margin: "0 0 0.5rem 0", 
-        color: "#6a1b1b",
-        fontSize: "18px"
-      }}>
-        {producto.nombre}
-      </h3>
+      <h3>{producto.nombre}</h3>
       
-      <p style={{ 
-        margin: "0 0 0.5rem 0", 
-        color: "#8b4d7a",
-        fontWeight: "600",
-        fontSize: "20px"
-      }}>
-        {formatearPrecio(producto.precio)}
-      </p>
+      <p className="precio">{formatearPrecio(producto.precio)}</p>
       
-      <div style={{ 
-        display: "flex", 
-        justifyContent: "space-between", 
-        alignItems: "center",
-        marginTop: "1rem"
-      }}>
-        <span style={{ 
-          padding: "4px 10px",
-          borderRadius: "12px",
-          fontSize: "12px",
-          background: "#f3e8ee",
-          color: "#6a1b1b",
-          fontWeight: "500"
-        }}>
+      <div className="card-footer">
+        <span className="badge categoria">
           {producto.categoria}
         </span>
         
-        <span style={{ 
-          padding: "4px 10px",
-          borderRadius: "12px",
-          fontSize: "12px",
-          background: producto.enStock ? "#d4edda" : "#f8d7da",
-          color: producto.enStock ? "#155724" : "#721c24",
-          fontWeight: "500"
-        }}>
+        <span className={`badge stock ${producto.enStock ? 'in-stock' : 'out-stock'}`}>
           {producto.enStock ? "En Stock" : "Sin Stock"}
         </span>
       </div>
+
+      <button>Agregar al carrito</button>
     </div>
   );
 }
