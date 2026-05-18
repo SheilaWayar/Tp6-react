@@ -17,7 +17,7 @@ function Header() {
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
-        <h1 style={{ margin: 0, fontSize: '1.5rem' }}>TP N°6 - React</h1>
+        <h1 style={{ margin: 0, fontSize: '1.5rem' }}>TP N°6 SHEILA WAYAR- React</h1>
         <nav>
           <a href="#" style={{color: 'white', marginRight: '1.5rem', textDecoration: 'none'}}>
             Inicio
