@@ -24,4 +24,4 @@ Catálogo responsive que muestra productos en cards con hover effects, estados d
 
 1. Clonar el repo:
 ```bash
-git clone https://github.com/SheilaWayar/Tp6-react
+https://tp6-react-n31z.vercel.app/
